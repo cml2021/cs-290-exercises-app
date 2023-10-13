@@ -1,0 +1,39 @@
+# Create exercise
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Front Squat",
+    "reps": 12,
+    "weight": 100,
+    "unit": "lbs",
+    "date": "11-22-22"
+}
+###
+
+# Get all exercises
+GET http://localhost:3000/exercises HTTP/1.1
+
+###
+
+# Get an exercise by ID
+GET http://localhost:3000/exercises/637e4995c881ccc5427ffa3a HTTP/1.1
+
+###
+
+# Update an exercise by ID
+PUT http://localhost:3000/exercises/638662c26811dca4970cfa1e HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Back Squat",
+    "reps": 10,
+    "weight": 150,
+    "unit": "lbs",
+    "date": "11-23-22"
+}
+
+###
+
+# Delete an exercise by ID
+DELETE http://localhost:3000/exercises/637e6ba9ebc5103a1fb05d70 HTTP/1.1
